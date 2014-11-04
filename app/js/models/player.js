@@ -61,6 +61,19 @@ PlayerCharacter.prototype.levelUp = function(){
     return this.level
   }
 };
+
+PlayerCharacter.prototype.max = function(){
+  while (this.level < 38){
+    this.levelUp();
+  }
+};
+
+PlayerCharacter.prototype.min = function(){
+  while (this.level > 0){
+    this.levelDown();
+  }
+};
+
 /**
  * Decrease level by one. Removes relevant geometry.
  * @returns {number} The new player level
