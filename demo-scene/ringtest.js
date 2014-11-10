@@ -33,7 +33,7 @@ var renderer = new THREE.WebGLRenderer({precision: 'highp', preserveDrawingBuffe
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera (90, window.innerWidth / window.innerHeight, 5, 1300);
 var renderModel = new THREE.RenderPass(scene, camera);
-var effectBloom = new THREE.BloomPass(1);
+var effectBloom = new THREE.BloomPass(2);
 var effectFXAA = new THREE.ShaderPass(THREE.FXAAShader);
 var effectCopy = new THREE.ShaderPass(THREE.CopyShader);
 
